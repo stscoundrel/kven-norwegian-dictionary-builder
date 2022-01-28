@@ -1,6 +1,8 @@
 package main
 
 import (
+	"fmt"
+
 	"github.com/stscoundrel/kven-norwegian-dictionary-builder/parser"
 	"github.com/stscoundrel/kven-norwegian-dictionary-builder/reader"
 )
@@ -12,4 +14,8 @@ func GetKvenNorwegianDictionary() parser.DictionaryEntries {
 	entries := parser.ParseDictionary(bytes)
 
 	return entries
+}
+
+func main() {
+	fmt.Println(GetKvenNorwegianDictionary())
 }
