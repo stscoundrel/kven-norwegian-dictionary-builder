@@ -2,6 +2,8 @@
 
 Build Kven - Norwegian dictionaru into easier-to-use data formats.
 
+# WORK IN PROGRESS
+
 Available formats:
 - JSON
 - DSL
