@@ -23,7 +23,7 @@ func TestKvenNorwegianDictionaryHasExpectedContent(t *testing.T) {
 		Headword:    "historialinen",
 		Stems:       []string{},
 		Definitions: []string{"historisk"},
-		Synonymes:   []string{"histoorialinen", "histoorillinen"},
+		Synonyms:    []string{"histoorialinen", "histoorillinen"},
 	}
 
 	if result[1].Headword != expected.Headword {
@@ -40,9 +40,9 @@ func TestKvenNorwegianDictionaryHasExpectedContent(t *testing.T) {
 		}
 	}
 
-	for index, synonyme := range result[1].Synonymes {
-		if synonyme != expected.Synonymes[index] {
-			t.Error("Did not return expected content. Received", synonyme, "expected ", expected.Synonymes[index])
+	for index, synonyme := range result[1].Synonyms {
+		if synonyme != expected.Synonyms[index] {
+			t.Error("Did not return expected content. Received", synonyme, "expected ", expected.Synonyms[index])
 		}
 	}
 }
@@ -70,7 +70,7 @@ func TestNorwegianKvenDictionaryHasExpectedContent(t *testing.T) {
 		Headword:    "flittig",
 		Stems:       []string{},
 		Definitions: []string{"ahkera", "uuttera", "virree", "ahkerasti"},
-		Synonymes:   []string{},
+		Synonyms:    []string{},
 	}
 
 	if result[2].Headword != expected.Headword {
@@ -87,8 +87,8 @@ func TestNorwegianKvenDictionaryHasExpectedContent(t *testing.T) {
 		}
 	}
 
-	if len(result[2].Synonymes) != len(expected.Synonymes) {
-		t.Error("Did not return expected content. Received", len(result[2].Synonymes), "expected ", len(expected.Synonymes))
+	if len(result[2].Synonyms) != len(expected.Synonyms) {
+		t.Error("Did not return expected content. Received", len(result[2].Synonyms), "expected ", len(expected.Synonyms))
 	}
 }
 
