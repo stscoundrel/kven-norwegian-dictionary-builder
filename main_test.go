@@ -24,3 +24,21 @@ func TestCreatesJsonBuild(t *testing.T) {
 		t.Error("JSON output file not found in build directory for Norwegian - Kven dictionary")
 	}
 }
+
+func TestCreatesDSLBuild(t *testing.T) {
+	ToDsl()
+
+	_, err1 := os.Stat("./build/kven-norwegian.dsl")
+	_, err2 := os.Stat("./build/norwegian-kven.dsl")
+
+	fmt.Println(err1)
+	fmt.Println(err2)
+
+	if errors.Is(err1, os.ErrNotExist) {
+		t.Error("DSL output file not found in build directory for Kven - Norwegian dictionary")
+	}
+
+	if errors.Is(err2, os.ErrNotExist) {
+		t.Error("DSL output file not found in build directory for Norwegian - Kven dictionary")
+	}
+}

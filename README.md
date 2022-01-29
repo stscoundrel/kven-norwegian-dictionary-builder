@@ -1,8 +1,6 @@
 # Kven - Norwegian Dictionary Builder
 
-Build Kven - Norwegian dictionaru into easier-to-use data formats.
-
-# WORK IN PROGRESS
+Build Kven - Norwegian dictionary into easier-to-use data formats.
 
 Available formats:
 - JSON
