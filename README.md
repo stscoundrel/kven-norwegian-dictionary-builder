@@ -10,6 +10,8 @@ Available formats:
 
 Main package exposes `ToJson`, and `ToDsl` functions, which respecticely generate output files in /build/ directory. Running `main` function generates all outputs.
 
+The builder outputs two dictionaries: Kven - Norwegian, and Norwegian - Kven. These are no 1:1 match, the former containing roughly 8000 entries while the latter contains roughly 7000 entries.
+
 ### About Kven language
 
 Kven is a member of the Finnic branch of the Uralic language family, and is closely related to Finnish. For political and historical reasons, it received the status of a minority language in 2005 within the framework of the European Charter for Regional or Minority Languages. Linguistically, however, it is seen as a mutually intelligible dialect of the Finnish language, and grouped together with the Peräpohjola dialects 
