@@ -3,19 +3,19 @@ package main
 import (
 	"fmt"
 
-	"github.com/stscoundrel/kven-norwegian-dictionary-builder/parser"
-	"github.com/stscoundrel/kven-norwegian-dictionary-builder/reader"
+	"github.com/stscoundrel/kven-norwegian-dictionary-builder/dictionary"
+	"github.com/stscoundrel/kven-norwegian-dictionary-builder/entries"
 )
 
-var KVEN_NORWEGIAN = "kven-norwegian"
+func GetKvenNorwegianDictionary() []entries.DictionaryEntry {
+	return dictionary.GetKvenNorwegianDictionary()
+}
 
-func GetKvenNorwegianDictionary() parser.DictionaryEntries {
-	bytes := reader.ReadXmlDictionary(KVEN_NORWEGIAN)
-	entries := parser.ParseDictionary(bytes)
-
-	return entries
+func GetNorwegianKvenDictionary() []entries.DictionaryEntry {
+	return dictionary.GetNorwegianKvenDictionary()
 }
 
 func main() {
 	fmt.Println(GetKvenNorwegianDictionary())
+	fmt.Println(GetNorwegianKvenDictionary())
 }
