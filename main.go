@@ -22,6 +22,15 @@ func ToJson() {
 	writer.WriteJson("build/norwegian-kven.json", norwegianToKven)
 }
 
+func ToDsl() {
+	kvenToNorwegian := GetKvenNorwegianDictionary()
+	norwegianToKven := GetNorwegianKvenDictionary()
+
+	writer.WriteDsl("build/kven-norwegian.dsl", kvenToNorwegian, dictionary.KVEN_NORWEGIAN)
+	writer.WriteDsl("build/norwegian-kven.dsl", norwegianToKven, dictionary.NORWEGIAN_KVEN)
+}
+
 func main() {
 	ToJson()
+	ToDsl()
 }
