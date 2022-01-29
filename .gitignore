@@ -16,3 +16,7 @@
 /.ionide
 /.DS_Store
 .DS_Store
+
+# Build files
+/build/
+!/build/.gitkeep
