@@ -1,10 +1,9 @@
 package main
 
 import (
-	"fmt"
-
 	"github.com/stscoundrel/kven-norwegian-dictionary-builder/dictionary"
 	"github.com/stscoundrel/kven-norwegian-dictionary-builder/entries"
+	"github.com/stscoundrel/kven-norwegian-dictionary-builder/writer"
 )
 
 func GetKvenNorwegianDictionary() []entries.DictionaryEntry {
@@ -15,7 +14,14 @@ func GetNorwegianKvenDictionary() []entries.DictionaryEntry {
 	return dictionary.GetNorwegianKvenDictionary()
 }
 
+func ToJson() {
+	kvenToNorwegian := GetKvenNorwegianDictionary()
+	norwegianToKven := GetNorwegianKvenDictionary()
+
+	writer.WriteJson("build/kven-norwegian.json", kvenToNorwegian)
+	writer.WriteJson("build/norwegian-kven.json", norwegianToKven)
+}
+
 func main() {
-	fmt.Println(GetKvenNorwegianDictionary())
-	fmt.Println(GetNorwegianKvenDictionary())
+	ToJson()
 }
